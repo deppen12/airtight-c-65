@@ -77,6 +77,14 @@ define Build/pisen_wmb001n-factory
   rm -rf "$@.tmp"
 endef
 
+define Device/airtight_c-65
+  ATH_SOC := qca9558
+  DEVICE_VENDOR := Airtight
+  DEVICE_MODEL := C-65
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x
+  IMAGE_SIZE := 15936k
+endef
+
 define Build/teltonika-fw-fake-checksum
 	# Teltonika U-Boot web based firmware upgrade/recovery routine compares
 	# 16 bytes from md5sum1[16] field in TP-Link v1 header (offset: 76 bytes
