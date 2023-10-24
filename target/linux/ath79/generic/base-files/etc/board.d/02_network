@@ -9,6 +9,10 @@ ath79_setup_interfaces()
 	local board="$1"
 
 	case "$board" in
+	airtight,c-65)
+		ucidef_set_interface_lan "eth0"
+		;;
+
 	adtran,bsap1800-v2|\
 	adtran,bsap1840|\
 	alfa-network,ap121f|\
